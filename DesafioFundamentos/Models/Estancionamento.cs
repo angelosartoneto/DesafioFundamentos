@@ -5,13 +5,11 @@
         private decimal precoInicial = 0;
         private decimal precoPorHora = 0;
         private List<string> veiculos = new List<string>();
-
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
             this.precoInicial = precoInicial;
             this.precoPorHora = precoPorHora;
         }
-
         public void AdicionarVeiculo()
         {
             Console.Clear();
@@ -20,7 +18,6 @@
             veiculos.Add(Console.ReadLine());
             Console.WriteLine("\n**** Veiculo cadastrado! ******");
         }
-
         public void RemoverVeiculo()
         {
             Console.Clear();
@@ -39,11 +36,9 @@
                 horas = Convert.ToInt32(Console.ReadLine());
 
                 valorTotal = precoInicial + precoPorHora * horas;
-
                 veiculos.Remove(placa);
 
                 Console.Write($"\nTOTAL A PAGAR: R${Math.Round(valorTotal, 2)}");
-
                 Console.WriteLine($"\n\n*** Veículo {placa} removido com sucesso! ***");
             }
             else
@@ -62,7 +57,6 @@
                 Console.WriteLine("Relatório de vagas x veículos: \n");
 
                 int contador = 0;
-
                 foreach (string veiculo in veiculos)
                 {
                     Console.WriteLine($"Vaga N°: {contador} | Placa/Veículo: {veiculo}");
